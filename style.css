@@ -16,6 +16,8 @@ body {
   padding: 0;
   display: flex;
   overflow-x: hidden;
+  line-height: 1.5;
+
 }
 
 /* Sidebar Navigation */
@@ -45,12 +47,32 @@ nav a {
 /* Main Content */
 main {
   flex-grow: 1;
-  padding: 20px;
+  padding: 20px 30px;
   word-wrap: break-word;
+  
 }
 
 /* Global Link Styling */
 a {
   color: #154406;
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+main h1 {
+  font-size: 1.8em;
+  margin-top: 0;
+}
+
+main h2 {
+  font-size: 1.4em;
+  margin-top: 1.5em;
+}
+
+main h3 {
+  font-size: 1.2em;
+  margin-top: 1.2em;
 }

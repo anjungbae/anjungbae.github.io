@@ -30,7 +30,6 @@ nav {
 nav h2 {
   font-size: 1.2em;
   margin-top: 0;
-  color: #154406;
 }
 
 nav a {
@@ -45,10 +44,6 @@ main {
   flex-grow: 1;
   padding: 20px;
   word-wrap: break-word;
-}
-
-main h1 {
-  color: #154406;
 }
 
 /* Global Link Styling */

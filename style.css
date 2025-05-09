@@ -60,3 +60,7 @@ nav {
   flex-shrink: 0; /* Prevent shrinking */
 }
 
+nav h2,
+main h1 {
+  color: #154406;
+}

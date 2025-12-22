@@ -6,13 +6,9 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
-    <h2>Jungbae An</h2>
-    <a href="index.html">Home (About)</a>
-    <a href="research.html">Research</a>
-    <a href="https://drive.google.com/file/d/1CQMmYR9RR1p6f7mzoPz5riExlwjXKNVq/view?usp=sharing" target="_blank">CV</a>    
-    <a href="others.html">Others</a>
-  </nav>
+  
+  <nav id="navbar"></nav>
+  
   <main>
     <h1>Others</h1><br>
       <h2>Research Experience</h2>
@@ -28,5 +24,21 @@
           <p>Programming: R, Python</p>
           <p>Language: Korean (native), English (fluent)</p>
   </main>
+
+  <script>
+    function loadNavbar() {
+      fetch('nav.html')
+        .then(response => {
+          if (!response.ok) throw new Error('Failed to load nav.html');
+          return response.text();
+        })
+        .then(data => {
+          document.getElementById('navbar').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading navbar:', error));
+    }
+    window.onload = loadNavbar;
+  </script>
+
 </body>
 </html>

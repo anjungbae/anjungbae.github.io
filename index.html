@@ -6,18 +6,30 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
-    <h2>Jungbae An</h2>
-    <a href="index.html">Home (About)</a>
-    <a href="research.html">Research</a>
-    <a href="https://drive.google.com/file/d/1CQMmYR9RR1p6f7mzoPz5riExlwjXKNVq/view?usp=sharing" target="_blank">CV</a>    
-    <a href="others.html">Others</a>
-  </nav>
+  
+  <nav id="navbar"></nav>
+  
   <main>
     <h1>Jungbae An</h1>
     <p>Welcome! I am a PhD candidate in political science at the Ohio State University, studying Political Institution, Social Influence, Networks, Natural Language Processing, Causal Inference. My research interests center on elite communication in and around Congress, with the lenses of network science, causal inference, and experiments.</p>
     <p>I am affiliated with <a href="https://democracyinstitute.osu.edu/" target="_blank">IDEA</a> and have a BA in Sociology from Yonsei University in South Korea. I enjoy wildlife and coffee.</p>
     <p>Contact: an.327 at osu.edu</p>
   </main>
+
+  <script>
+    function loadNavbar() {
+      fetch('nav.html')
+        .then(response => {
+          if (!response.ok) throw new Error('Failed to load nav.html');
+          return response.text();
+        })
+        .then(data => {
+          document.getElementById('navbar').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading navbar:', error));
+    }
+    window.onload = loadNavbar;
+  </script>
+
 </body>
 </html>

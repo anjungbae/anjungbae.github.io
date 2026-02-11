@@ -76,3 +76,9 @@ main h3 {
   font-size: 1.2em;
   margin-top: 1.2em;
 }
+
+details {
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+

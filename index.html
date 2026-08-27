@@ -4,19 +4,56 @@
   <meta charset="UTF-8">
   <title>Home</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .intro {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+    .intro-text {
+      flex: 1;
+      min-width: 0;
+    }
+    .intro-photo {
+      flex: 0 0 220px;
+    }
+    .intro-photo img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+    }
+    @media (max-width: 640px) {
+      .intro {
+        flex-direction: column-reverse;
+        gap: 1rem;
+      }
+      .intro-photo {
+        flex: none;
+        width: 180px;
+      }
+    }
+  </style>
 </head>
 <body>
-  
+
   <nav id="navbar"></nav>
-  
+
   <main>
     <h1>Jungbae An</h1>
-    <p>Welcome! I am a PhD candidate in political science at the Ohio State University. I study social influence in political institutions, using network analysis, causal inference, and natural language processing. My dissertation develops a causal framework for speech diffusion in the U.S. House, showing from 138 years of floor speeches that members' shared issue attention spreads across party lines as much as within them — challenging echo-chamber and agenda-control accounts. It further shows that this attention alignment drives bipartisan voting coordination precisely under party pressure, and my co-authored field experiment on deliberative town halls demonstrates that members of Congress can persuade the public through policy expertise rather than blind deference to elites. I am on the market for positions in American politics, political methodology, and computational social science.</p>
-    <p>I am currently on the job market.</p>
-    <p>I am affiliated with <a href="https://democracyinstitute.osu.edu/" target="_blank">IDEA</a> and hold a BA in Sociology from Yonsei University. I enjoy wildlife and coffee.</p>
-    <p>Contact: an.327 at osu.edu</p>
+    <div class="intro">
+      <div class="intro-text">
+        <p>Welcome! I am a PhD candidate in political science at the Ohio State University. I study social influence in political institutions, using network analysis, causal inference, and natural language processing. My dissertation develops a causal framework for speech diffusion in the U.S. House, showing from 138 years of floor speeches that members' shared issue attention spreads across party lines as much as within them &mdash; challenging echo-chamber and agenda-control accounts. It further shows that this attention alignment drives bipartisan voting coordination precisely under party pressure, and my co-authored field experiment on deliberative town halls demonstrates that members of Congress can persuade the public through policy expertise rather than blind deference to elites. I am on the market for positions in American politics, political methodology, and computational social science.</p>
+        <p>I am currently on the job market.</p>
+        <p>I am affiliated with <a href="https://democracyinstitute.osu.edu/" target="_blank">IDEA</a> and hold a BA in Sociology from Yonsei University. I enjoy wildlife and coffee.</p>
+        <p>Contact: an.327 at osu.edu</p>
+      </div>
+      <div class="intro-photo">
+        <img src="anjungbae.jpg" alt="Portrait of Jungbae An">
+      </div>
+    </div>
   </main>
-  
+
   <script>
     function loadNavbar() {
       fetch('nav.html')
@@ -31,6 +68,5 @@
     }
     window.onload = loadNavbar;
   </script>
-
 </body>
 </html>
